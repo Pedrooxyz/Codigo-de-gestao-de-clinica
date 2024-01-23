@@ -1,0 +1,56 @@
+\babel@toc {portuguese}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \textbf {\textit {Ficheiros .h e .c criados.}}}}{9}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {\textit {Structs.}}}}{13}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \textbf {\textit {Função MostraAjuda.}}}}{13}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces \textbf {\textit {Parâmetros da função main.}}}}{14}{figure.2.4}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \textbf {\textit {Variáveis.}}}}{14}{figure.2.5}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \textbf {\textit {Funções de leitura e armazenamento dos dados.}}}}{17}{figure.2.6}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces \textbf {\textit {Ficheiros para uso como argumentos.}}}}{18}{figure.2.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf {\textit {Cabeçalho de primeiro nível.}}}}{20}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf {\textit {Segundo cabeçalho de segundo nível.}}}}{20}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \textbf {\textit {Primeiro cabeçalho de terceiro nível.}}}}{21}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \textbf {\textit {Segundo cabeçalho de terceiro nível.}}}}{21}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \textbf {\textit {Último cabeçalho de terceiro nível.}}}}{21}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \textbf {\textit {Último cabeçalho de segundo nível.}}}}{22}{figure.3.6}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \textbf {\textit {Regra padrão all.}}}}{24}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textbf {\textit {Regra exec.}}}}{24}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \textbf {\textit {Alvos objetos.}}}}{24}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \textbf {\textit {Regras run2f e run3f.}}}}{25}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \textbf {\textit {Regra ajuda.}}}}{25}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \textbf {\textit {Regras tab2f e tab3f.}}}}{25}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \textbf {\textit {Regra clean.}}}}{26}{figure.4.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf {\textit {Terminal.}}}}{27}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf {\textit {Doxygen GUI}}}}{27}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \textbf {\textit {Optimize for C or PHP output}}}}{28}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \textbf {\textit {CASE SENSE NAMES}}}}{29}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \textbf {\textit {QUIT}}}}{29}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \textbf {\textit {Input}}}}{30}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces \textbf {\textit {USE MDFILE AS MAINPAGE}}}}{30}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \textbf {\textit {Run doxygen}}}}{31}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces \textbf {\textit {Exemplo da documentação no início de cada}} ficheiro}}{31}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \textbf {\textit {Gráfico}}}}{31}{figure.5.10}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces \textbf {\textit {Exemplo de como a documentação deve ser feita}} para cada função}}{32}{figure.5.11}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces \textbf {\textit {Exemplo de como a documentação deve ser feita para cada struct/enumerado}} }}{32}{figure.5.12}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \textbf {\textit {Ficheiro refman.tex}}}}{33}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \textbf {\textit {Terminal}} }}{33}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \textbf {\textit {Imagem do texmaker}} }}{34}{figure.6.3}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \textbf {\textit {Ficheiro refman.pdf }}}}{34}{figure.6.4}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces \textbf {\textit {Comando para texto em negrito}} }}{35}{figure.6.5}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces \textbf {\textit {Comando para texto em itálico}} }}{35}{figure.6.6}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces \textbf {\textit {Comando para inserir imagens}} }}{35}{figure.6.7}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces \textbf {\textit {Comando para inserir listagens de cógigo}} }}{36}{figure.6.8}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces \textbf {\textit {Comando para inserir índices}} }}{36}{figure.6.9}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces \textbf {\textit {Exemplo de onde clicámos para aceder ao texto pretendido}} }}{37}{figure.7.1}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces \textbf {\textit {Exemplo de onde clicámos para aceder ao texto pretendido}} }}{37}{figure.7.2}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces \textbf {\textit {Texto pretendido}} }}{38}{figure.7.3}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces \textbf {\textit {Aplicação do ficheiro . bib}} }}{38}{figure.7.4}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces \textbf {\textit {Aplicação do ficheiro . bib}} }}{38}{figure.7.5}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

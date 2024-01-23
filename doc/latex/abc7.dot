@@ -1,0 +1,14 @@
+digraph abc7 {
+rankdir=LR;
+ranksep=0.5;
+b->a [label=100];
+b->c [label=2];
+a->a [label=4];
+d->a [label=3];
+a->d [label=2];
+d->b [label=1];
+e->b [label=2];
+e->d [label=3];
+a->c [label=2];
+a->e [label=1];
+}

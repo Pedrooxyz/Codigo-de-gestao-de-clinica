@@ -1,0 +1,505 @@
+\hypertarget{GereDietas_8c}{}\doxysection{/home/carolina/\+Desktop/\+Trabalho Prático/d-\/18/src/\+Gere\+Dietas.c File Reference}
+\label{GereDietas_8c}\index{/home/carolina/Desktop/Trabalho Prático/d-\/18/src/GereDietas.c@{/home/carolina/Desktop/Trabalho Prático/d-\/18/src/GereDietas.c}}
+
+
+Leitura, escrita e manipulação de informações relacionadas com dietas e planos nutricionais.  
+
+
+{\ttfamily \#include \char`\"{}Dados.\+h\char`\"{}}\newline
+Include dependency graph for Gere\+Dietas.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GereDietas_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{GereDietas_8c_a2d79efbf6445bd8948cb45fa0ba8b992}{Mostra\+Ajuda}} ()
+\begin{DoxyCompactList}\small\item\em Exibe informações de ajuda sobre o programa. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{GereDietas_8c_a93b3a56ece4340a34ff30072fb969316}{Exporta\+Dados\+Dieta}} (char file\+Name\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structDieta}{Dieta}} dietas\mbox{[}$\,$\mbox{]}, int maximodietas)
+\begin{DoxyCompactList}\small\item\em Exporta os dados das dietas para um arquivo CSV ou TXT. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{GereDietas_8c_a43f095ea02510b3c746584e23ae702bf}{Le\+Dados\+Dieta}} (char separador, char file\+Name\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structDieta}{Dieta}} $\ast$dietas, int maximodietas)
+\begin{DoxyCompactList}\small\item\em Lê os dados das dietas de um arquivo CSV ou TXT. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{GereDietas_8c_ac01e912b08ef9e6b825f4b01262346e5}{Exporta\+Dados\+Plano\+Nutri}} (char file\+Name\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} plano\mbox{[}$\,$\mbox{]}, int maximodietas)
+\begin{DoxyCompactList}\small\item\em Exporta os dados do plano nutricional para um arquivo CSV ou TXT. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{GereDietas_8c_a04b5adafc4b46c427c76bd3cf5317fbf}{Le\+Dados\+Plano\+Nutri}} (char separador, char file\+Name\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} $\ast$nutri, int maximodados)
+\begin{DoxyCompactList}\small\item\em Lê os dados dos planos nutricionais de um arquivo e armazena-\/os em um array de estruturas \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{GereDietas_8c_a68d5266178858cf9bbba77feed22df6d}{Num\+Pacientes\+Ultrapassam\+Cal}} (\mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} plano\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structDieta}{Dieta}} dietas\mbox{[}$\,$\mbox{]}, int maximopacientes)
+\begin{DoxyCompactList}\small\item\em Conta o número de pacientes cujo consumo de calorias ultrapassa o limite definido no plano nutricional. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GereDietas_8c_a17bba55d30c4ba8402a4008a3ecf575b}{Identifica\+Fora\+Intervalo}} (\mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} plano\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structDieta}{Dieta}} dietas\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structPaciente}{Paciente}} dados\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}} dadospacientes\mbox{[}$\,$\mbox{]}, int maxpaciente)
+\begin{DoxyCompactList}\small\item\em Identifica os pacientes cujo consumo de calorias está fora do intervalo definido no plano nutricional. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GereDietas_8c_a9767d1a3f42f051b319ba38d74fc6b36}{Ordena\+Pacientes\+Fora\+Intervalo}} (\mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}} dadospacientes\mbox{[}$\,$\mbox{]}, int maxpaciente)
+\begin{DoxyCompactList}\small\item\em Ordena os pacientes fora do intervalo com base no número do paciente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GereDietas_8c_a37b043bda4281665d1c183aa1ee681d6}{Lista\+Plano\+Nutricional}} (\mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} planos\mbox{[}$\,$\mbox{]}, int maxplanos, int numpaciente, int refeicao, char data\+Inicio\mbox{[}$\,$\mbox{]}, char data\+Fim\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Lista o plano nutricional para um paciente em uma refeição específica durante um determinado período. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GereDietas_8c_a3fa074668b420670bec0325f5c120e86}{Calcular\+Medias\+Refeicoes}} (\mbox{\hyperlink{structDieta}{Dieta}} dietas\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structMediaPaciente}{Media\+Paciente}} dados\mbox{[}$\,$\mbox{]}, int maxdietas, int maxpacientes, char data\+Inicio\mbox{[}$\,$\mbox{]}, char data\+Fim\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calcula as médias de calorias consumidas em diferentes refeições para cada paciente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Leitura, escrita e manipulação de informações relacionadas com dietas e planos nutricionais. 
+
+\begin{DoxyAuthor}{Author}
+Pedro Ribeiro, Ricardo Fernandes, Carolina Branco (\href{mailto:a27960@alunos.ipca.pt}{\texttt{ a27960@alunos.\+ipca.\+pt}} \href{mailto:a279861@alunos.opca.pt}{\texttt{ a279861@alunos.\+opca.\+pt}} \href{mailto:a27983@alunos.ipca.pt}{\texttt{ a27983@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/12-\/27
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{GereDietas_8c_a3fa074668b420670bec0325f5c120e86}\label{GereDietas_8c_a3fa074668b420670bec0325f5c120e86}} 
+\index{GereDietas.c@{GereDietas.c}!CalcularMediasRefeicoes@{CalcularMediasRefeicoes}}
+\index{CalcularMediasRefeicoes@{CalcularMediasRefeicoes}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{CalcularMediasRefeicoes()}{CalcularMediasRefeicoes()}}
+{\footnotesize\ttfamily void Calcular\+Medias\+Refeicoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDieta}{Dieta}}}]{dietas\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structMediaPaciente}{Media\+Paciente}}}]{dados\mbox{[}$\,$\mbox{]},  }\item[{int}]{maxdietas,  }\item[{int}]{maxpacientes,  }\item[{char}]{data\+Inicio\mbox{[}$\,$\mbox{]},  }\item[{char}]{data\+Fim\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Calcula as médias de calorias consumidas em diferentes refeições para cada paciente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dietas} & Um array de estruturas \mbox{\hyperlink{structDieta}{Dieta}} contendo informações sobre as dietas. \\
+\hline
+{\em dados} & Um array de estruturas \mbox{\hyperlink{structMediaPaciente}{Media\+Paciente}} para armazenar os resultados das médias. \\
+\hline
+{\em maxdietas} & O número máximo de elementos no array de dietas. \\
+\hline
+{\em maxpacientes} & O número máximo de pacientes. \\
+\hline
+{\em data\+Inicio} & A data de início do período desejado para o cálculo das médias. \\
+\hline
+{\em data\+Fim} & A data de fim do período desejado para o cálculo das médias. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{314                                                                                                                                         \{}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxpacientes; i++) \{}
+\DoxyCodeLine{317             \textcolor{keywordtype}{double} auxcontadorPequenoAlmoco = 0.0;}
+\DoxyCodeLine{318             \textcolor{keywordtype}{double} auxcontadorAlmoco = 0.0;}
+\DoxyCodeLine{319             \textcolor{keywordtype}{double} auxcontadorJantar = 0.0;}
+\DoxyCodeLine{320             \textcolor{keywordtype}{int} numPequenoAlmoco = 0;}
+\DoxyCodeLine{321             \textcolor{keywordtype}{int} numAlmoco = 0;}
+\DoxyCodeLine{322             \textcolor{keywordtype}{int} numJantar = 0;}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < maxdietas; j++) \{}
+\DoxyCodeLine{325                 \textcolor{keywordflow}{if} (strcmp(dietas[j].datainicio, dataInicio) <= 0 \&\& strcmp(dietas[j].datafim, dataFim) >= 0 \&\&}
+\DoxyCodeLine{326                     dietas[j].numpaciente == i + 1) \{}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328                     \textcolor{keywordflow}{switch} (dietas[j].tp) \{}
+\DoxyCodeLine{329                         \textcolor{keywordflow}{case} 0: \textcolor{comment}{// Pequeno Almoço}}
+\DoxyCodeLine{330                             auxcontadorPequenoAlmoco += dietas[j].\mbox{\hyperlink{structDieta_ac8ed1b49d5718974aaa25d6260dfe664}{calorias}};}
+\DoxyCodeLine{331                             numPequenoAlmoco++;}
+\DoxyCodeLine{332                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{333                         \textcolor{keywordflow}{case} 1: \textcolor{comment}{// Almoço}}
+\DoxyCodeLine{334                             auxcontadorAlmoco += dietas[j].\mbox{\hyperlink{structDieta_ac8ed1b49d5718974aaa25d6260dfe664}{calorias}};}
+\DoxyCodeLine{335                             numAlmoco++;}
+\DoxyCodeLine{336                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{337                         \textcolor{keywordflow}{case} 2: \textcolor{comment}{// Jantar}}
+\DoxyCodeLine{338                             auxcontadorJantar += dietas[j].\mbox{\hyperlink{structDieta_ac8ed1b49d5718974aaa25d6260dfe664}{calorias}};}
+\DoxyCodeLine{339                             numJantar++;}
+\DoxyCodeLine{340                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{341             \}}
+\DoxyCodeLine{342         \}}
+\DoxyCodeLine{343     \}}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345     dados[i].\mbox{\hyperlink{structMediaPaciente_aa22f213fbb704c0db4c237568fa67912}{numpaciente}} = i + 1;}
+\DoxyCodeLine{346     dados[i].\mbox{\hyperlink{structMediaPaciente_a6f519dd1c53751be8645a54fc448bf7d}{mediapequenoalmoco}} = (numPequenoAlmoco > 0) ? auxcontadorPequenoAlmoco / numPequenoAlmoco : 0;}
+\DoxyCodeLine{347     dados[i].\mbox{\hyperlink{structMediaPaciente_a1d6f712821d25644391028d6554d5ce1}{mediaalmoco}} = (numAlmoco > 0) ? auxcontadorAlmoco / numAlmoco : 0;}
+\DoxyCodeLine{348     dados[i].\mbox{\hyperlink{structMediaPaciente_a509aaeb893b4004237dea3077f76f3c1}{mediajantar}} = (numJantar > 0) ? auxcontadorJantar / numJantar : 0;}
+\DoxyCodeLine{349         \}}
+\DoxyCodeLine{350     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GereDietas_8c_a93b3a56ece4340a34ff30072fb969316}\label{GereDietas_8c_a93b3a56ece4340a34ff30072fb969316}} 
+\index{GereDietas.c@{GereDietas.c}!ExportaDadosDieta@{ExportaDadosDieta}}
+\index{ExportaDadosDieta@{ExportaDadosDieta}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{ExportaDadosDieta()}{ExportaDadosDieta()}}
+{\footnotesize\ttfamily bool Exporta\+Dados\+Dieta (\begin{DoxyParamCaption}\item[{char}]{file\+Name\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structDieta}{Dieta}}}]{dietas\mbox{[}$\,$\mbox{]},  }\item[{int}]{maximodietas }\end{DoxyParamCaption})}
+
+
+
+Exporta os dados das dietas para um arquivo CSV ou TXT. 
+
+Esta função recebe um nome de um arquivo e um array de structs \mbox{\hyperlink{structDieta}{Dieta}}, e exporta os dados das dietas para o arquivo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & é o nome do arquivo que vai ser feita a exportação. \\
+\hline
+{\em dietas} & é o array de structs \mbox{\hyperlink{structDieta}{Dieta}} contendo os dados a serem exportados. \\
+\hline
+{\em maximodietas} & Número máximo de dietas no array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a exportação for bem sucedida, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                                                           \{}
+\DoxyCodeLine{47     FILE* fp;}
+\DoxyCodeLine{48     fp = fopen(fileName, \textcolor{stringliteral}{"{}w"{}}); \textcolor{comment}{//Abre o ficheiro para escrita, usado o caracter "{}w"{} para apagar o que estiver escrito e escrever depois o pedido}}
+\DoxyCodeLine{49     \textcolor{keywordflow}{if} (fp == NULL) \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{//Caso não seja possível abrir o ficheiro retorna false}}
+\DoxyCodeLine{50     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximodietas; i++) \{}
+\DoxyCodeLine{51             \textcolor{comment}{// O ciclo for itera sobre o array dietas e vai escrevendo o mesmo no ficheiro, no formato CSV.}}
+\DoxyCodeLine{52             fprintf(fp, \textcolor{stringliteral}{"{}\%d;\%s;\%s;\%d;\%s;\%d\(\backslash\)n"{}}, dietas[i].numpaciente, dietas[i].datainicio, dietas[i].datafim, dietas[i].tp, dietas[i].alimento, dietas[i].calorias);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55     fclose(fp);}
+\DoxyCodeLine{56     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{57     \textcolor{comment}{//Fecha o ficheiro e devolve true}}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GereDietas_8c_ac01e912b08ef9e6b825f4b01262346e5}\label{GereDietas_8c_ac01e912b08ef9e6b825f4b01262346e5}} 
+\index{GereDietas.c@{GereDietas.c}!ExportaDadosPlanoNutri@{ExportaDadosPlanoNutri}}
+\index{ExportaDadosPlanoNutri@{ExportaDadosPlanoNutri}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{ExportaDadosPlanoNutri()}{ExportaDadosPlanoNutri()}}
+{\footnotesize\ttfamily bool Exporta\+Dados\+Plano\+Nutri (\begin{DoxyParamCaption}\item[{char}]{file\+Name\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}}}]{plano\mbox{[}$\,$\mbox{]},  }\item[{int}]{maximodietas }\end{DoxyParamCaption})}
+
+
+
+Exporta os dados do plano nutricional para um arquivo CSV ou TXT. 
+
+Esta função recebe um nome de arquivo e exporta os dados do plano nutricional para o arquivo no formato CSV ou TXT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & é o nome do arquivo para exportação. \\
+\hline
+{\em plano} & é o array de structs \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} contendo os dados a serem exportados. \\
+\hline
+{\em maximodietas} & é o número máximo de planos nutricionais no array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a exportação for bem sucedida, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119                                                                                    \{}
+\DoxyCodeLine{120     FILE* fp;}
+\DoxyCodeLine{121     fp = fopen(fileName, \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{122     \textcolor{keywordflow}{if} (fp == NULL) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{123     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximodietas; i++) \{}
+\DoxyCodeLine{124         fprintf(fp, \textcolor{stringliteral}{"{}\%d;\%s;\%s;\%d;\%d;\%d\(\backslash\)n"{}}, plano[i].numpaciente, plano[i].datainicio, plano[i].datafim, plano[i].tp, plano[i].caloriasMin, plano[i].caloriasMax);}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126     fclose(fp);}
+\DoxyCodeLine{127     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{128 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GereDietas_8c_a17bba55d30c4ba8402a4008a3ecf575b}\label{GereDietas_8c_a17bba55d30c4ba8402a4008a3ecf575b}} 
+\index{GereDietas.c@{GereDietas.c}!IdentificaForaIntervalo@{IdentificaForaIntervalo}}
+\index{IdentificaForaIntervalo@{IdentificaForaIntervalo}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{IdentificaForaIntervalo()}{IdentificaForaIntervalo()}}
+{\footnotesize\ttfamily void Identifica\+Fora\+Intervalo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}}}]{plano\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structDieta}{Dieta}}}]{dietas\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structPaciente}{Paciente}}}]{dados\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}}}]{dadospacientes\mbox{[}$\,$\mbox{]},  }\item[{int}]{maxpaciente }\end{DoxyParamCaption})}
+
+
+
+Identifica os pacientes cujo consumo de calorias está fora do intervalo definido no plano nutricional. 
+
+Esta função percorre os arrays de planos nutricionais, dietas e dados dos pacientes, identificando os pacientes cujo consumo de calorias está fora do intervalo definido pelo plano nutricional. Os pacientes identificados são armazenados na struct \mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plano} & é o array de structs \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} contendo os dados dos planos nutricionais. \\
+\hline
+{\em dietas} & é o array de structs \mbox{\hyperlink{structDieta}{Dieta}} contendo os dados das dietas. \\
+\hline
+{\em dados} & é o array de structs \mbox{\hyperlink{structPaciente}{Paciente}} contendo os dados dos pacientes. \\
+\hline
+{\em dadospacientes} & é o array de structs \mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}} que armazenará os dados dos pacientes que não cumprem. \\
+\hline
+{\em maxpaciente} & é o número máximo de pacientes nos arrays. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{215                                                                                                                                       \{}
+\DoxyCodeLine{216     \textcolor{keywordtype}{int} num = 0;}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxpaciente; i++) \{}
+\DoxyCodeLine{219     \textcolor{comment}{// Verifica se o consumo de calorias está fora do intervalo definido no plano}}
+\DoxyCodeLine{220     \textcolor{keywordflow}{if} (dietas[i].calorias > plano[i].caloriasMax || dietas[i].calorias < plano[i].caloriasMin) \{}
+\DoxyCodeLine{221         \textcolor{comment}{// Armazena os dados dos pacientes que não cumprem as condições}}
+\DoxyCodeLine{222         dadospacientes[num].\mbox{\hyperlink{structNaoCumpPaciente_aa22f213fbb704c0db4c237568fa67912}{numpaciente}} = dados[i].\mbox{\hyperlink{structPaciente_aa22f213fbb704c0db4c237568fa67912}{numpaciente}};}
+\DoxyCodeLine{223         strcpy(dadospacientes[num].nome, dados[i].nome);}
+\DoxyCodeLine{224         dadospacientes[num].\mbox{\hyperlink{structNaoCumpPaciente_ad3ca1329242be21da0e253b47fcc43ca}{telefone}} = dados[i].\mbox{\hyperlink{structPaciente_ad3ca1329242be21da0e253b47fcc43ca}{telefone}};}
+\DoxyCodeLine{225         num++;}
+\DoxyCodeLine{226         \}}
+\DoxyCodeLine{227     \}}
+\DoxyCodeLine{228 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GereDietas_8c_a43f095ea02510b3c746584e23ae702bf}\label{GereDietas_8c_a43f095ea02510b3c746584e23ae702bf}} 
+\index{GereDietas.c@{GereDietas.c}!LeDadosDieta@{LeDadosDieta}}
+\index{LeDadosDieta@{LeDadosDieta}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{LeDadosDieta()}{LeDadosDieta()}}
+{\footnotesize\ttfamily bool Le\+Dados\+Dieta (\begin{DoxyParamCaption}\item[{char}]{separador,  }\item[{char}]{file\+Name\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structDieta}{Dieta}} $\ast$}]{dietas,  }\item[{int}]{maximodietas }\end{DoxyParamCaption})}
+
+
+
+Lê os dados das dietas de um arquivo CSV ou TXT. 
+
+Esta função recebe um nome de arquivo e lê os dados das dietas do arquivo no formato CSV ou TXT. Os dados lidos são armazenados em um array de structs \mbox{\hyperlink{structDieta}{Dieta}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em separador} & \\
+\hline
+{\em file\+Name} & é o nome do arquivo para leitura. \\
+\hline
+{\em dietas} & é o array de structs \mbox{\hyperlink{structDieta}{Dieta}} para armazenar os dados lidos. \\
+\hline
+{\em maximodietas} & é p número máximo de dietas no array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a leitura for bem sucedida, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                                                     \{}
+\DoxyCodeLine{79     FILE * fp;}
+\DoxyCodeLine{80     fp = fopen (fileName,\textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{81     \textcolor{keywordflow}{if} (fp == NULL) \{}
+\DoxyCodeLine{82     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Retorna false se o apontador do ficheiro for nulo}}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84     \textcolor{keywordflow}{if} (separador == \textcolor{charliteral}{';'}) \{}
+\DoxyCodeLine{85         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximodietas; i++) \{}
+\DoxyCodeLine{86             fscanf(fp, \textcolor{stringliteral}{"{}\%d;\%99[\string^;];\%99[\string^;];\%d;\%99[\string^;];\%d"{}}, \&dietas[i].numpaciente, dietas[i].datainicio, dietas[i].datafim, \&dietas[i].tp, dietas[i].alimento, \&dietas[i].calorias);}
+\DoxyCodeLine{87             \textcolor{comment}{//Para verifcar o que foi lido:}}
+\DoxyCodeLine{88             \textcolor{comment}{//printf("{}\%d;\%s;\%s;\%d;\%s;\%d\(\backslash\)n"{}, dietas[i].numpaciente, dietas[i].datainicio, dietas[i].datafim, dietas[i].tp, dietas[i].alimento, dietas[i].calorias);}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92     \textcolor{keywordflow}{if} (separador == \textcolor{charliteral}{'\(\backslash\)t'}) \{}
+\DoxyCodeLine{93         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximodietas; i++) \{}
+\DoxyCodeLine{94             fscanf(fp, \textcolor{stringliteral}{"{}\%d\(\backslash\)t\%99[\string^\(\backslash\)t]\(\backslash\)t\%99[\string^\(\backslash\)t]\(\backslash\)t\%d\(\backslash\)t\%99[\string^\(\backslash\)t]\(\backslash\)t\%d"{}}, \&dietas[i].numpaciente, dietas[i].datainicio, dietas[i].datafim, \&dietas[i].tp, dietas[i].alimento, \&dietas[i].calorias);}
+\DoxyCodeLine{95             \textcolor{comment}{//Para verifcar o que foi lido:}}
+\DoxyCodeLine{96             \textcolor{comment}{//printf("{}\%d\(\backslash\)t\%s\(\backslash\)t\%s\(\backslash\)t\%d\(\backslash\)t\%s\(\backslash\)t\%d\(\backslash\)n"{}, dietas[i].numpaciente, dietas[i].datainicio, dietas[i].datafim, dietas[i].tp, dietas[i].alimento, dietas[i].calorias);}}
+\DoxyCodeLine{97         \}}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99     fclose(fp);}
+\DoxyCodeLine{100     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{101     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GereDietas_8c_a04b5adafc4b46c427c76bd3cf5317fbf}\label{GereDietas_8c_a04b5adafc4b46c427c76bd3cf5317fbf}} 
+\index{GereDietas.c@{GereDietas.c}!LeDadosPlanoNutri@{LeDadosPlanoNutri}}
+\index{LeDadosPlanoNutri@{LeDadosPlanoNutri}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{LeDadosPlanoNutri()}{LeDadosPlanoNutri()}}
+{\footnotesize\ttfamily bool Le\+Dados\+Plano\+Nutri (\begin{DoxyParamCaption}\item[{char}]{separador,  }\item[{char}]{file\+Name\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} $\ast$}]{nutri,  }\item[{int}]{maximodados }\end{DoxyParamCaption})}
+
+
+
+Lê os dados dos planos nutricionais de um arquivo e armazena-\/os em um array de estruturas \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}}. 
+
+Esta função recebe um nome de arquivo e lê os dados das dietas do arquivo no formato CSV ou TXT. Os dados lidos são armazenados em um array de structs \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & é o nome do arquivo a ser lido. \\
+\hline
+{\em plano} & é o array de estruturas \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} para armazenar os dados lidos. \\
+\hline
+{\em maximodietas} & é o número máximo de dietas a serem lidas do arquivo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a leitura for bem sucedida, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{143                                                                                             \{}
+\DoxyCodeLine{144     FILE * fp;}
+\DoxyCodeLine{145     fp = fopen(fileName,\textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{146     \textcolor{keywordflow}{if} (fp == NULL) \{}
+\DoxyCodeLine{147         \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Retorna um dado vazio se o apontador do ficheiro for nulo}}
+\DoxyCodeLine{148     \}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150     \textcolor{keywordflow}{if} (separador == \textcolor{charliteral}{';'}) \{}
+\DoxyCodeLine{151         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximodados; i++) \{}
+\DoxyCodeLine{152             fscanf(fp, \textcolor{stringliteral}{"{}\%d;\%99[\string^;];\%99[\string^;];\%d;\%d;\%d"{}}, \&nutri[i].numpaciente, nutri[i].datainicio, nutri[i].datafim, \&nutri[i].tp, \&nutri[i].caloriasMin, \&nutri[i].caloriasMax);}
+\DoxyCodeLine{153             \textcolor{comment}{//Para verifcar o que foi lido:}}
+\DoxyCodeLine{154             \textcolor{comment}{//printf("{}\%d;\%s;\%s;\%d;\%d;\%d\(\backslash\)n"{}, nutri[i].numpaciente, nutri[i].datainicio, nutri[i].datafim, nutri[i].tp, nutri[i].caloriasMin, nutri[i].caloriasMax);}}
+\DoxyCodeLine{155         \}}
+\DoxyCodeLine{156     \}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158     \textcolor{keywordflow}{if} (separador == \textcolor{charliteral}{'\(\backslash\)t'}) \{}
+\DoxyCodeLine{159         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximodados; i++) \{}
+\DoxyCodeLine{160             fscanf(fp, \textcolor{stringliteral}{"{}\%d\(\backslash\)t\%99[\string^\(\backslash\)t]\(\backslash\)t\%99[\string^\(\backslash\)t]\(\backslash\)t\%d\(\backslash\)t\%d\(\backslash\)t\%d"{}}, \&nutri[i].numpaciente, nutri[i].datainicio, nutri[i].datafim, \&nutri[i].tp, \&nutri[i].caloriasMin, \&nutri[i].caloriasMax);}
+\DoxyCodeLine{161             \textcolor{comment}{//Para verifcar o que foi lido:}}
+\DoxyCodeLine{162             \textcolor{comment}{//printf("{}\%d\(\backslash\)t\%s\(\backslash\)t\%s\(\backslash\)t\%d\(\backslash\)t\%d\(\backslash\)t\%d\(\backslash\)n"{}, nutri[i].numpaciente, nutri[i].datainicio, nutri[i].datafim, nutri[i].tp, nutri[i].caloriasMin, nutri[i].caloriasMax);        }}
+\DoxyCodeLine{163         \}}
+\DoxyCodeLine{164     \}}
+\DoxyCodeLine{165     fclose(fp);}
+\DoxyCodeLine{166     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{167 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GereDietas_8c_a37b043bda4281665d1c183aa1ee681d6}\label{GereDietas_8c_a37b043bda4281665d1c183aa1ee681d6}} 
+\index{GereDietas.c@{GereDietas.c}!ListaPlanoNutricional@{ListaPlanoNutricional}}
+\index{ListaPlanoNutricional@{ListaPlanoNutricional}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{ListaPlanoNutricional()}{ListaPlanoNutricional()}}
+{\footnotesize\ttfamily void Lista\+Plano\+Nutricional (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}}}]{planos\mbox{[}$\,$\mbox{]},  }\item[{int}]{maxplanos,  }\item[{int}]{numpaciente,  }\item[{int}]{refeicao,  }\item[{char}]{data\+Inicio\mbox{[}$\,$\mbox{]},  }\item[{char}]{data\+Fim\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Lista o plano nutricional para um paciente em uma refeição específica durante um determinado período. 
+
+Esta função imprime na tela o plano nutricional para um paciente em uma refeição específica durante um período definido.
+
+
+\begin{DoxyParams}{Parameters}
+{\em planos} & é o array de structs \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} que contem os dados dos planos nutricionais. \\
+\hline
+{\em maxplanos} & é o número máximo de planos nutricionais no array. \\
+\hline
+{\em numpaciente} & é o número do paciente para o qual o plano nutricional será listado. \\
+\hline
+{\em refeicao} & é o indice da refeição (0 para \textquotesingle{}peq. almoço\textquotesingle{}, 1 para \textquotesingle{}almoço\textquotesingle{}, 2 para \textquotesingle{}jantar\textquotesingle{}). \\
+\hline
+{\em data\+Inicio} & é a data de início do período desejado no formato \char`\"{}\+DD/\+MM/\+AAAA\char`\"{}. \\
+\hline
+{\em data\+Fim} & é a data de término do período desejado no formato \char`\"{}\+DD/\+MM/\+AAAA\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{271                                                                                                                                  \{}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273 \textcolor{keywordtype}{char} aux[N];}
+\DoxyCodeLine{274     \textcolor{keywordflow}{if} (refeicao == 0) \{}
+\DoxyCodeLine{275         strcpy(aux, \textcolor{stringliteral}{"{}peq. almoço"{}});}
+\DoxyCodeLine{276     \}}
+\DoxyCodeLine{277     \textcolor{keywordflow}{if} (refeicao == 1) \{}
+\DoxyCodeLine{278         strcpy(aux, \textcolor{stringliteral}{"{}almoço"{}});}
+\DoxyCodeLine{279     \}}
+\DoxyCodeLine{280     \textcolor{keywordflow}{if} (refeicao == 2) \{}
+\DoxyCodeLine{281         strcpy(aux, \textcolor{stringliteral}{"{}jantar"{}});}
+\DoxyCodeLine{282     \}}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284     \textcolor{comment}{//Criação de uma variável e colocação da string correspondente a cada índice para ser imprimido na consola o valor em string}}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286     printf(\textcolor{stringliteral}{"{}Plano Nutricional para o Paciente \%d na Refeicao '\%s' no periodo de \%s a \%s:\(\backslash\)n\(\backslash\)n"{}}, numpaciente, aux, dataInicio, dataFim);}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxplanos; i++) \{}
+\DoxyCodeLine{289         \textcolor{keywordflow}{if} (planos[i].numpaciente == numpaciente \&\& planos[i].tp == refeicao \&\& strcmp(planos[i].datainicio, dataInicio) <= 0 \&\& strcmp(planos[i].datafim, dataFim) >= 0) \{}
+\DoxyCodeLine{290             printf(\textcolor{stringliteral}{"{}O paciente de número: \%d\(\backslash\)n"{}}, planos[i].numpaciente);}
+\DoxyCodeLine{291             printf(\textcolor{stringliteral}{"{}O plano dura de \%s a \%s\(\backslash\)n"{}}, planos[i].datainicio, planos[i].datafim);}
+\DoxyCodeLine{292             printf(\textcolor{stringliteral}{"{}Na refeição \%s deve ingerir:\(\backslash\)n"{}}, aux);}
+\DoxyCodeLine{293             printf(\textcolor{stringliteral}{"{}Calorias Mínimas: \%d\(\backslash\)n"{}}, planos[i].caloriasMin);}
+\DoxyCodeLine{294             printf(\textcolor{stringliteral}{"{}Calorias Máximas: \%d\(\backslash\)n\(\backslash\)n"{}}, planos[i].caloriasMax);}
+\DoxyCodeLine{295         \}}
+\DoxyCodeLine{296     \}}
+\DoxyCodeLine{297 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GereDietas_8c_a2d79efbf6445bd8948cb45fa0ba8b992}\label{GereDietas_8c_a2d79efbf6445bd8948cb45fa0ba8b992}} 
+\index{GereDietas.c@{GereDietas.c}!MostraAjuda@{MostraAjuda}}
+\index{MostraAjuda@{MostraAjuda}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{MostraAjuda()}{MostraAjuda()}}
+{\footnotesize\ttfamily void Mostra\+Ajuda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exibe informações de ajuda sobre o programa. 
+
+Esta função imprime mensagens de ajuda na consola, explicando o funcionamento do programa. Inclui instruções sobre como utilizar o programa. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                    \{}
+\DoxyCodeLine{25     printf(\textcolor{stringliteral}{"{}Para compilar o programa utilize uma das seguintes opções:\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{26     printf(\textcolor{stringliteral}{"{}-\/ajuda: É utilizada para fornecer ajuda ao utilizador sobre os comandos a utilizar\(\backslash\)n"{}});}
+\DoxyCodeLine{27     printf(\textcolor{stringliteral}{"{}-\/tab : É utilizada para compilar o programa com ficheiros passados por argumento com os dados separados por tabs\(\backslash\)n"{}});}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GereDietas_8c_a68d5266178858cf9bbba77feed22df6d}\label{GereDietas_8c_a68d5266178858cf9bbba77feed22df6d}} 
+\index{GereDietas.c@{GereDietas.c}!NumPacientesUltrapassamCal@{NumPacientesUltrapassamCal}}
+\index{NumPacientesUltrapassamCal@{NumPacientesUltrapassamCal}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{NumPacientesUltrapassamCal()}{NumPacientesUltrapassamCal()}}
+{\footnotesize\ttfamily int Num\+Pacientes\+Ultrapassam\+Cal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}}}]{plano\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structDieta}{Dieta}}}]{dietas\mbox{[}$\,$\mbox{]},  }\item[{int}]{maximopacientes }\end{DoxyParamCaption})}
+
+
+
+Conta o número de pacientes cujo consumo de calorias ultrapassa o limite definido no plano nutricional. 
+
+Esta função percorre os arrays de planos nutricionais e dietas e conta quantos pacientes ultrapassaram o limite de calorias definido no plano nutricional para a respectiva refeição.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plano} & é o array de structs \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} contendo os dados dos planos nutricionais. \\
+\hline
+{\em dietas} & é o array de structs \mbox{\hyperlink{structDieta}{Dieta}} contendo os dados das dietas. \\
+\hline
+{\em maximopacientes} & é o número máximo de pacientes nos arrays. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o número de pacientes cujo consumo de calorias ultrapassa o limite definido no plano nutricional. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{185                                                                                         \{}
+\DoxyCodeLine{186     \textcolor{keywordtype}{int} contador = 0;}
+\DoxyCodeLine{187         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximopacientes; i++) \{  \textcolor{comment}{// Itera sobre o array de pacientes}}
+\DoxyCodeLine{188             \textcolor{keywordflow}{if} (dietas[i].calorias > plano[i].caloriasMax) \{}
+\DoxyCodeLine{189                 contador++; \textcolor{comment}{// Se o consumo de calorias na dieta atual excede o limite definido no plano é somada 1 unidade à variável contador}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191         \}}
+\DoxyCodeLine{192     \}}
+\DoxyCodeLine{193 \textcolor{keywordflow}{return} contador;}
+\DoxyCodeLine{194     \textcolor{comment}{// Retorna o número total de pacientes cujo consumo de calorias ultrapassa o limite}}
+\DoxyCodeLine{195 \}  }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GereDietas_8c_a9767d1a3f42f051b319ba38d74fc6b36}\label{GereDietas_8c_a9767d1a3f42f051b319ba38d74fc6b36}} 
+\index{GereDietas.c@{GereDietas.c}!OrdenaPacientesForaIntervalo@{OrdenaPacientesForaIntervalo}}
+\index{OrdenaPacientesForaIntervalo@{OrdenaPacientesForaIntervalo}!GereDietas.c@{GereDietas.c}}
+\doxysubsubsection{\texorpdfstring{OrdenaPacientesForaIntervalo()}{OrdenaPacientesForaIntervalo()}}
+{\footnotesize\ttfamily void Ordena\+Pacientes\+Fora\+Intervalo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}}}]{dadospacientes\mbox{[}$\,$\mbox{]},  }\item[{int}]{maxpaciente }\end{DoxyParamCaption})}
+
+
+
+Ordena os pacientes fora do intervalo com base no número do paciente. 
+
+Esta função ordena o array de pacientes fora do intervalo na struct \mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}} com base no número do paciente em ordem decrescente.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dadospacientes} & é o array de structs \mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}} a ser ordenado. \\
+\hline
+{\em maxpaciente} & é o número máximo de pacientes no array. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{241                                                                                      \{}
+\DoxyCodeLine{242     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxpaciente -\/ 1; i++) \{}
+\DoxyCodeLine{243         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = i + 1; j < maxpaciente; j++) \{}
+\DoxyCodeLine{244             \textcolor{keywordflow}{if} (dadospacientes[i].numpaciente < dadospacientes[j].numpaciente) \{  \textcolor{comment}{// Compara o número dos pacientes para determinar a ordem}}
+\DoxyCodeLine{245             \mbox{\hyperlink{structNaoCumpPaciente}{NaoCumpPaciente}} temp = dadospacientes[i];}
+\DoxyCodeLine{246             dadospacientes[i] = dadospacientes[j];}
+\DoxyCodeLine{247             dadospacientes[j] = temp;}
+\DoxyCodeLine{248             \textcolor{comment}{// Troca os elementos se estiverem fora de ordem}}
+\DoxyCodeLine{249             \}}
+\DoxyCodeLine{250         \}}
+\DoxyCodeLine{251     \}}
+\DoxyCodeLine{252 \}}
+
+\end{DoxyCode}

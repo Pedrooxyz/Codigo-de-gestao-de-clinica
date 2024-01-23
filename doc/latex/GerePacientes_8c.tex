@@ -1,0 +1,197 @@
+\hypertarget{GerePacientes_8c}{}\doxysection{/home/carolina/\+Desktop/\+Trabalho Prático/d-\/18/src/\+Gere\+Pacientes.c File Reference}
+\label{GerePacientes_8c}\index{/home/carolina/Desktop/Trabalho Prático/d-\/18/src/GerePacientes.c@{/home/carolina/Desktop/Trabalho Prático/d-\/18/src/GerePacientes.c}}
+
+
+Leitura, escrita e manipulação de informações relacionadas a pacientes.  
+
+
+{\ttfamily \#include \char`\"{}Dados.\+h\char`\"{}}\newline
+Include dependency graph for Gere\+Pacientes.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GerePacientes_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{GerePacientes_8c_aa7431ac4c698b3518ad28fc6444d3353}{Exporta\+Dados\+Pacientes}} (char nome\+Ficheiro\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structPaciente}{Paciente}} pacientes\mbox{[}$\,$\mbox{]}, int maximo\+Pacientes)
+\begin{DoxyCompactList}\small\item\em Exporta os dados dos pacientes para um arquivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{GerePacientes_8c_a65945dece25e12122663c3d154face3f}{Le\+Dados\+Pacientes}} (char separador, char file\+Name\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structPaciente}{Paciente}} $\ast$dados, int maximoplanos)
+\begin{DoxyCompactList}\small\item\em Lê os dados dos pacientes de um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GerePacientes_8c_a8f9b98d93dde41c4379b45e6f9cf49eb}{Gerar\+Tabela\+Refeicoes}} (\mbox{\hyperlink{structPaciente}{Paciente}} pacientes\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structDieta}{Dieta}} dietas\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} planos\mbox{[}$\,$\mbox{]}, int max\+Pacientes, int max\+Dietas, int max\+Planos)
+\begin{DoxyCompactList}\small\item\em Gera uma tabela de refeições com informações sobre dietas e planos nutricionais. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Leitura, escrita e manipulação de informações relacionadas a pacientes. 
+
+\begin{DoxyAuthor}{Author}
+Pedro Ribeiro, Ricardo Fernandes, Carolina Branco (\href{mailto:a27960@alunos.ipca.pt}{\texttt{ a27960@alunos.\+ipca.\+pt}} \href{mailto:a279861@alunos.opca.pt}{\texttt{ a279861@alunos.\+opca.\+pt}} \href{mailto:a27983@alunos.ipca.pt}{\texttt{ a27983@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/12-\/27
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{GerePacientes_8c_aa7431ac4c698b3518ad28fc6444d3353}\label{GerePacientes_8c_aa7431ac4c698b3518ad28fc6444d3353}} 
+\index{GerePacientes.c@{GerePacientes.c}!ExportaDadosPacientes@{ExportaDadosPacientes}}
+\index{ExportaDadosPacientes@{ExportaDadosPacientes}!GerePacientes.c@{GerePacientes.c}}
+\doxysubsubsection{\texorpdfstring{ExportaDadosPacientes()}{ExportaDadosPacientes()}}
+{\footnotesize\ttfamily bool Exporta\+Dados\+Pacientes (\begin{DoxyParamCaption}\item[{char}]{nome\+Ficheiro\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structPaciente}{Paciente}}}]{pacientes\mbox{[}$\,$\mbox{]},  }\item[{int}]{maximo\+Pacientes }\end{DoxyParamCaption})}
+
+
+
+Exporta os dados dos pacientes para um arquivo. 
+
+Esta função exporta os dados dos pacientes para um arquivo no formato CSV ou TXT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & é o nome do arquivo para exportar os dados. \\
+\hline
+{\em pacientes} & é o array de structs \mbox{\hyperlink{structPaciente}{Paciente}} que contem os dados dos pacientes. \\
+\hline
+{\em maximo\+Pacientes} & é o número máximo de pacientes no array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a exportação for bem sucedida, caso contrário, retorna false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                                                                            \{}
+\DoxyCodeLine{31     FILE* fp;}
+\DoxyCodeLine{32     fp = fopen(nomeFicheiro, \textcolor{stringliteral}{"{}w"{}});  \textcolor{comment}{//Abre o ficheiro para escrita, usado o caracter "{}w"{} para apagar o que estiver escrito e escrever depois o pedido}}
+\DoxyCodeLine{33     \textcolor{keywordflow}{if} (fp == NULL) \textcolor{keywordflow}{return} 0; \textcolor{comment}{//Caso não seja possível abrir o ficheiro retorna false}}
+\DoxyCodeLine{34         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximoPacientes; i++) \{}
+\DoxyCodeLine{35             \textcolor{comment}{// O ciclo for itera sobre o array pacientes e vai escrevendo o mesmo no ficheiro, no formato CSV.}}
+\DoxyCodeLine{36             fprintf(fp, \textcolor{stringliteral}{"{}\%d;\%s;\%d\(\backslash\)n"{}}, pacientes[i].numpaciente, pacientes[i].nome, pacientes[i].telefone);}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38     fclose(fp);}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{40     \textcolor{comment}{//Fecha o ficheiro e devolve true}}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GerePacientes_8c_a8f9b98d93dde41c4379b45e6f9cf49eb}\label{GerePacientes_8c_a8f9b98d93dde41c4379b45e6f9cf49eb}} 
+\index{GerePacientes.c@{GerePacientes.c}!GerarTabelaRefeicoes@{GerarTabelaRefeicoes}}
+\index{GerarTabelaRefeicoes@{GerarTabelaRefeicoes}!GerePacientes.c@{GerePacientes.c}}
+\doxysubsubsection{\texorpdfstring{GerarTabelaRefeicoes()}{GerarTabelaRefeicoes()}}
+{\footnotesize\ttfamily void Gerar\+Tabela\+Refeicoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPaciente}{Paciente}}}]{pacientes\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structDieta}{Dieta}}}]{dietas\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}}}]{planos\mbox{[}$\,$\mbox{]},  }\item[{int}]{max\+Pacientes,  }\item[{int}]{max\+Dietas,  }\item[{int}]{max\+Planos }\end{DoxyParamCaption})}
+
+
+
+Gera uma tabela de refeições com informações sobre dietas e planos nutricionais. 
+
+Esta função imprime uma tabela que contem informações sobre as refeições, incluindo dados do paciente, tipo de refeição, datas de início e término, calorias mínimas e máximas do plano nutricional, e consumo de calorias.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pacientes} & é o array de structs \mbox{\hyperlink{structPaciente}{Paciente}} que contem os dados dos pacientes. \\
+\hline
+{\em dietas} & é o array de structs \mbox{\hyperlink{structDieta}{Dieta}} que contem os dados das dietas. \\
+\hline
+{\em planos} & é o array de structs \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} que contem os dados dos planos nutricionais. \\
+\hline
+{\em max\+Pacientes} & é o número máximo de pacientes no array. \\
+\hline
+{\em max\+Dietas} & é o número máximo de dietas no array. \\
+\hline
+{\em max\+Planos} & é o número máximo de planos nutricionais no array. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101                                                                                                                                      \{}
+\DoxyCodeLine{102     printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)t \%-\/10s\(\backslash\)t \%-\/20s \%-\/10s\(\backslash\)t \%-\/15s\(\backslash\)t \%-\/15s\(\backslash\)t \%-\/15s\(\backslash\)t \%-\/15s\(\backslash\)n\(\backslash\)n"{}},}
+\DoxyCodeLine{103     \textcolor{stringliteral}{"{}NP"{}}, \textcolor{stringliteral}{"{}Paciente"{}}, \textcolor{stringliteral}{"{}Tipo Refeição"{}}, \textcolor{stringliteral}{"{}Data Início"{}}, \textcolor{stringliteral}{"{}Data Fim"{}}, \textcolor{stringliteral}{"{}Calorias Mínimo"{}}, \textcolor{stringliteral}{"{}Calorias Máximo"{}}, \textcolor{stringliteral}{"{}Consumo"{}});}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxDietas; i++) \{}
+\DoxyCodeLine{106         \textcolor{keywordtype}{char} aux[N];}
+\DoxyCodeLine{107         \textcolor{keywordflow}{if} (planos[i].tp == 0) \{}
+\DoxyCodeLine{108             strcpy(aux, \textcolor{stringliteral}{"{}peq. almoço"{}});}
+\DoxyCodeLine{109         \}}
+\DoxyCodeLine{110         \textcolor{keywordflow}{if} (planos[i].tp == 1) \{}
+\DoxyCodeLine{111             strcpy(aux, \textcolor{stringliteral}{"{}almoço"{}});}
+\DoxyCodeLine{112         \}}
+\DoxyCodeLine{113         \textcolor{keywordflow}{if} (planos[i].tp == 2) \{}
+\DoxyCodeLine{114             strcpy(aux, \textcolor{stringliteral}{"{}jantar"{}});}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117         \textcolor{comment}{//Criação de uma variável e colocação temporária da string correspondente a cada índice para ser imprimido na consola o valor em string}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119         printf(\textcolor{stringliteral}{"{}\%04d\(\backslash\)t \%-\/10s\(\backslash\)t \%-\/20s \%-\/10s\(\backslash\)t \%-\/15s\(\backslash\)t \%-\/15d\(\backslash\)t \%-\/15d\(\backslash\)t \%-\/15d\(\backslash\)n"{}},}
+\DoxyCodeLine{120         dietas[i].numpaciente,}
+\DoxyCodeLine{121         pacientes[dietas[i].numpaciente -\/ 1].nome,}
+\DoxyCodeLine{122         aux,}
+\DoxyCodeLine{123         planos[i].datainicio,}
+\DoxyCodeLine{124         planos[i].datafim,}
+\DoxyCodeLine{125         planos[dietas[i].numpaciente -\/ 1].caloriasMin,}
+\DoxyCodeLine{126         planos[dietas[i].numpaciente -\/ 1].caloriasMax,}
+\DoxyCodeLine{127         dietas[i].calorias);}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GerePacientes_8c_a65945dece25e12122663c3d154face3f}\label{GerePacientes_8c_a65945dece25e12122663c3d154face3f}} 
+\index{GerePacientes.c@{GerePacientes.c}!LeDadosPacientes@{LeDadosPacientes}}
+\index{LeDadosPacientes@{LeDadosPacientes}!GerePacientes.c@{GerePacientes.c}}
+\doxysubsubsection{\texorpdfstring{LeDadosPacientes()}{LeDadosPacientes()}}
+{\footnotesize\ttfamily bool Le\+Dados\+Pacientes (\begin{DoxyParamCaption}\item[{char}]{separador,  }\item[{char}]{file\+Name\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structPaciente}{Paciente}} $\ast$}]{dados,  }\item[{int}]{maximoplanos }\end{DoxyParamCaption})}
+
+
+
+Lê os dados dos pacientes de um arquivo. 
+
+Esta função lê os dados dos pacientes de um arquivo no formato CSV.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & é o nome do arquivo para ler os dados dos pacientes. \\
+\hline
+{\em pacientes} & é o array de structs \mbox{\hyperlink{structPaciente}{Paciente}} para armazenar os dados lidos. \\
+\hline
+{\em maximo\+Pacientes} & é o número máximo de pacientes no array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a leitura for bem sucedida, caso contrário, retorna false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                                                                                            \{}
+\DoxyCodeLine{59    }
+\DoxyCodeLine{60     FILE* fp;}
+\DoxyCodeLine{61     fp = fopen(fileName, \textcolor{stringliteral}{"{}r"{}}); }
+\DoxyCodeLine{62     \textcolor{keywordflow}{if} (fp == NULL) \{}
+\DoxyCodeLine{63         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{65     \textcolor{keywordflow}{if} (separador == \textcolor{charliteral}{';'}) \{}
+\DoxyCodeLine{66         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximoplanos; i++) \{}
+\DoxyCodeLine{67             fscanf(fp, \textcolor{stringliteral}{"{}\%d;\%99[\string^;];\%d"{}}, \&dados[i].numpaciente, dados[i].nome, \&dados[i].telefone);}
+\DoxyCodeLine{68             \textcolor{comment}{//Para verifcar o que foi lido:}}
+\DoxyCodeLine{69             \textcolor{comment}{//printf("{}dados lidos :\%d;\%s;\%d\(\backslash\)n"{}, dados[i].numpaciente, dados[i].nome, dados[i].telefone);}}
+\DoxyCodeLine{70         \}}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72     \textcolor{keywordflow}{if} (separador == \textcolor{charliteral}{'\(\backslash\)t'}) \{}
+\DoxyCodeLine{73         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maximoplanos; i++) \{}
+\DoxyCodeLine{74             fscanf(fp, \textcolor{stringliteral}{"{}\%d\(\backslash\)t\%99[\string^\(\backslash\)t]\(\backslash\)t\%d"{}}, \&dados[i].numpaciente, dados[i].nome, \&dados[i].telefone);}
+\DoxyCodeLine{75             \textcolor{comment}{//Para verifcar o que foi lido:}}
+\DoxyCodeLine{76             \textcolor{comment}{//printf("{}lidos : \%d\(\backslash\)t\%s\(\backslash\)t\%d\(\backslash\)n"{}, dados[i].numpaciente, dados[i].nome, dados[i].telefone);}}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79     fclose(fp);}
+\DoxyCodeLine{80     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{81 \}}
+
+\end{DoxyCode}

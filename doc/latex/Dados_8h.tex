@@ -1,0 +1,99 @@
+\hypertarget{Dados_8h}{}\doxysection{/home/carolina/\+Desktop/\+Trabalho Prático/d-\/18/src/\+Dados.h File Reference}
+\label{Dados_8h}\index{/home/carolina/Desktop/Trabalho Prático/d-\/18/src/Dados.h@{/home/carolina/Desktop/Trabalho Prático/d-\/18/src/Dados.h}}
+
+
+Fornece estruturas de dados que podem ser usadas para representar informações sobre pacientes, dietas, planos nutricionais e métricas relacionadas à ingestão de calorias.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for Dados.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Dados_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Dados_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDieta}{Dieta}}
+\item 
+struct \mbox{\hyperlink{structPaciente}{Paciente}}
+\item 
+struct \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}}
+\item 
+struct \mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}}
+\item 
+struct \mbox{\hyperlink{structMediaPaciente}{Media\+Paciente}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Dados_8h_a0240ac851181b84ac374872dc5434ee4}\label{Dados_8h_a0240ac851181b84ac374872dc5434ee4}} 
+\#define {\bfseries N}~30
+\item 
+\mbox{\Hypertarget{Dados_8h_a52037c938e3c1b126c6277da5ca689d0}\label{Dados_8h_a52037c938e3c1b126c6277da5ca689d0}} 
+\#define {\bfseries M}~40
+\item 
+\mbox{\Hypertarget{Dados_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}\label{Dados_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}} 
+\#define {\bfseries L}~50
+\item 
+\mbox{\Hypertarget{Dados_8h_a07484107e6d9fdf38b53edf631d6511d}\label{Dados_8h_a07484107e6d9fdf38b53edf631d6511d}} 
+\#define {\bfseries E}~5
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Dados_8h_a6f83799b601e8700ef5d0939b7a95edf}\label{Dados_8h_a6f83799b601e8700ef5d0939b7a95edf}} 
+typedef struct \mbox{\hyperlink{structDieta}{Dieta}} {\bfseries Dieta}
+\item 
+\mbox{\Hypertarget{Dados_8h_a6240fb2932a9284c16ce2e9e5a0cd52c}\label{Dados_8h_a6240fb2932a9284c16ce2e9e5a0cd52c}} 
+typedef struct \mbox{\hyperlink{structPaciente}{Paciente}} {\bfseries Paciente}
+\item 
+\mbox{\Hypertarget{Dados_8h_ac14ea00defd669f8f9cdd323ab1692cc}\label{Dados_8h_ac14ea00defd669f8f9cdd323ab1692cc}} 
+typedef struct \mbox{\hyperlink{structPlanoNutri}{Plano\+Nutri}} {\bfseries Plano\+Nutri}
+\item 
+\mbox{\Hypertarget{Dados_8h_a233ff71c1c5b925523a982ae513c0d58}\label{Dados_8h_a233ff71c1c5b925523a982ae513c0d58}} 
+typedef struct \mbox{\hyperlink{structNaoCumpPaciente}{Nao\+Cump\+Paciente}} {\bfseries Nao\+Cump\+Paciente}
+\item 
+\mbox{\Hypertarget{Dados_8h_a7ed3a7d3ef53f8d7f23e0ad377531f4e}\label{Dados_8h_a7ed3a7d3ef53f8d7f23e0ad377531f4e}} 
+typedef struct \mbox{\hyperlink{structMediaPaciente}{Media\+Paciente}} {\bfseries Media\+Paciente}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Dados_8h_aa8959f8bc30fdd8f313e2f805532c0e7}\label{Dados_8h_aa8959f8bc30fdd8f313e2f805532c0e7}} 
+enum {\bfseries Refeicao} \{ {\bfseries PEQUENO\+\_\+\+ALMOCO}
+, {\bfseries ALMOCO}
+, {\bfseries JANTAR}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fornece estruturas de dados que podem ser usadas para representar informações sobre pacientes, dietas, planos nutricionais e métricas relacionadas à ingestão de calorias. 
+
+\begin{DoxyAuthor}{Author}
+Pedro Ribeiro, Ricardo Fernandes, Carolina Branco (\href{mailto:a27960@alunos.ipca.pt}{\texttt{ a27960@alunos.\+ipca.\+pt}} \href{mailto:a279861@alunos.opca.pt}{\texttt{ a279861@alunos.\+opca.\+pt}} \href{mailto:a27983@alunos.ipca.pt}{\texttt{ a27983@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/12-\/27
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}

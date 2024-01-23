@@ -1,0 +1,251 @@
+\hypertarget{main_8c}{}\doxysection{/home/carolina/\+Desktop/\+Trabalho Prático/d-\/18/src/main.c File Reference}
+\label{main_8c}\index{/home/carolina/Desktop/Trabalho Prático/d-\/18/src/main.c@{/home/carolina/Desktop/Trabalho Prático/d-\/18/src/main.c}}
+
+
+Local de implementação das funções.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Dados.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Funcoes.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Inserção de parametros na função main. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Local de implementação das funções. 
+
+\begin{DoxyAuthor}{Author}
+Pedro Ribeiro, Ricardo Fernandes, Carolina Branco (\href{mailto:a27960@alunos.ipca.pt}{\texttt{ a27960@alunos.\+ipca.\+pt}} \href{mailto:a279861@alunos.opca.pt}{\texttt{ a279861@alunos.\+opca.\+pt}} \href{mailto:a27983@alunos.ipca.pt}{\texttt{ a27983@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/12-\/27
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Inserção de parametros na função main. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & número de argumentos \\
+\hline
+{\em argv} & array de argumentos, indica a posição do argumento (começa no 0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                  \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     setlocale(LC\_ALL, \textcolor{stringliteral}{"{}Portuguese"{}});}
+\DoxyCodeLine{27     \textcolor{keywordtype}{char} separador = \textcolor{charliteral}{';'};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{char} fpacientes[N], fdietas[N], fplanos[N];}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} aux = 0;}
+\DoxyCodeLine{30     \mbox{\hyperlink{structPaciente}{Paciente}} dados[E];}
+\DoxyCodeLine{31     \mbox{\hyperlink{structDieta}{Dieta}} dietas[E];}
+\DoxyCodeLine{32     \mbox{\hyperlink{structPlanoNutri}{PlanoNutri}} nutri[E];}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordflow}{if} (argc < 3 \&\& strcmp(argv[1], \textcolor{stringliteral}{"{}-\/ajuda"{}})!=0)\{}
+\DoxyCodeLine{35         printf (\textcolor{stringliteral}{"{}Número insuficiente de argumentos\(\backslash\)n"{}});}
+\DoxyCodeLine{36         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{37     \} }
+\DoxyCodeLine{38     \textcolor{keywordflow}{if} (strcmp(argv[1], \textcolor{stringliteral}{"{}-\/ajuda"{}}) == 0) \{}
+\DoxyCodeLine{39         \mbox{\hyperlink{Funcoes_8h_a2d79efbf6445bd8948cb45fa0ba8b992}{MostraAjuda}}();}
+\DoxyCodeLine{40         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42     \textcolor{keywordflow}{if} (strcmp(argv[1], \textcolor{stringliteral}{"{}-\/tab"{}}) == 0) \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{if}(argc < 4)\{}
+\DoxyCodeLine{44             printf (\textcolor{stringliteral}{"{}Número insuficiente de argumentos\(\backslash\)n"{}});}
+\DoxyCodeLine{45             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{46         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{47             separador = \textcolor{charliteral}{'\(\backslash\)t'};}
+\DoxyCodeLine{48             strcpy(fpacientes, argv[2]);}
+\DoxyCodeLine{49             strcpy(fdietas, argv[3]);}
+\DoxyCodeLine{50             \textcolor{keywordflow}{if} (argc == 5) \{}
+\DoxyCodeLine{51                 strcpy (fplanos, argv[4]);}
+\DoxyCodeLine{52                 aux = 1;}
+\DoxyCodeLine{53             \}}
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55     \}}
+\DoxyCodeLine{56     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{if}(argc < 3)\{}
+\DoxyCodeLine{58             printf (\textcolor{stringliteral}{"{}Número insuficiente de argumentos\(\backslash\)n"{}});}
+\DoxyCodeLine{59             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{60         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{61             strcpy(fpacientes, argv[1]);}
+\DoxyCodeLine{62             strcpy(fdietas, argv[2]);}
+\DoxyCodeLine{63             \textcolor{keywordflow}{if} (argc == 4) \{}
+\DoxyCodeLine{64                 strcpy (fplanos, argv[3]);}
+\DoxyCodeLine{65                 aux = 1;}
+\DoxyCodeLine{66             \}}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69     \textcolor{keywordflow}{if} (aux == 0) \{}
+\DoxyCodeLine{70         \textcolor{keywordtype}{char} linha[E][1000];}
+\DoxyCodeLine{71         \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{72         \textcolor{keywordflow}{while} (i < E \&\& fgets(linha[i], 1000, stdin) != NULL) \{}
+\DoxyCodeLine{73             \textcolor{keywordflow}{if} (linha[i][0] == \textcolor{charliteral}{'\(\backslash\)n'}) \{}
+\DoxyCodeLine{74                 printf(\textcolor{stringliteral}{"{}Fim da entrada.\(\backslash\)n"{}});}
+\DoxyCodeLine{75                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{76             \}}
+\DoxyCodeLine{77         i++;}
+\DoxyCodeLine{78         \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < i; j++) \{}
+\DoxyCodeLine{81             printf(\textcolor{stringliteral}{"{}Dados lidos: \%s"{}}, linha[j]);}
+\DoxyCodeLine{82         \}}
+\DoxyCodeLine{83         }
+\DoxyCodeLine{84         FILE *fplanosFILE;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86         \textcolor{keywordflow}{if} (separador == \textcolor{charliteral}{';'}) \{}
+\DoxyCodeLine{87             fplanosFILE = fopen(\textcolor{stringliteral}{"{}planosstdin.csv"{}}, \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{88             strcpy(fplanos,\textcolor{stringliteral}{"{}planosstdin.csv"{}});}
+\DoxyCodeLine{89         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (separador == \textcolor{charliteral}{'\(\backslash\)t'}) \{}
+\DoxyCodeLine{90             fplanosFILE = fopen(\textcolor{stringliteral}{"{}tplanosstdin.csv"{}}, \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{91             strcpy(fplanos,\textcolor{stringliteral}{"{}tplanosstdin.csv"{}});}
+\DoxyCodeLine{92         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{93             printf(\textcolor{stringliteral}{"{}Separador não suportado.\(\backslash\)n"{}});}
+\DoxyCodeLine{94             \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{95         \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97         \textcolor{keywordflow}{if} (fplanosFILE == NULL) \{}
+\DoxyCodeLine{98             perror(\textcolor{stringliteral}{"{}Erro ao abrir o ficheiro de planos"{}});}
+\DoxyCodeLine{99             \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{100         \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < i; j++) \{}
+\DoxyCodeLine{103             fputs(linha[j], fplanosFILE);}
+\DoxyCodeLine{104         \}   }
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         fclose(fplanosFILE);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109     }
+\DoxyCodeLine{110     \mbox{\hyperlink{Funcoes_8h_a65945dece25e12122663c3d154face3f}{LeDadosPacientes}}(separador, fpacientes, dados, E);}
+\DoxyCodeLine{111     \mbox{\hyperlink{Funcoes_8h_a43f095ea02510b3c746584e23ae702bf}{LeDadosDieta}}(separador, fdietas, dietas, E);}
+\DoxyCodeLine{112     \mbox{\hyperlink{Funcoes_8h_a04b5adafc4b46c427c76bd3cf5317fbf}{LeDadosPlanoNutri}}(separador, fplanos, nutri, E);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     \mbox{\hyperlink{structNaoCumpPaciente}{NaoCumpPaciente}} nCump[E];}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \mbox{\hyperlink{structMediaPaciente}{MediaPaciente}} mediaPc[E];}
+\DoxyCodeLine{117     }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#pragma region TÓPICO 1. a. (main)}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     \textcolor{keywordflow}{if} (\mbox{\hyperlink{Funcoes_8h_aa7431ac4c698b3518ad28fc6444d3353}{ExportaDadosPacientes}}(\textcolor{stringliteral}{"{}ExpPacientes.csv"{}}, dados, E)) \{}
+\DoxyCodeLine{121         printf(\textcolor{stringliteral}{"{}Dados dos pacientes exportados com sucesso...\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{122     \}}
+\DoxyCodeLine{123     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{124         printf(\textcolor{stringliteral}{"{}Erro ao exportar os dados dos pacientes...\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#pragma region TÓPICO 1. b. (main)}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     \textcolor{keywordflow}{if} (\mbox{\hyperlink{Funcoes_8h_a93b3a56ece4340a34ff30072fb969316}{ExportaDadosDieta}}(\textcolor{stringliteral}{"{}ExpDietas.csv"{}}, dietas, E)) \{}
+\DoxyCodeLine{132         printf(\textcolor{stringliteral}{"{}Dados das dietas exportados com sucesso...\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{133     \}}
+\DoxyCodeLine{134     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{135         printf(\textcolor{stringliteral}{"{}Erro ao exportar os dados das dietas...\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{136     \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#pragma region TÓPICO 1. c. (main)}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     \textcolor{keywordflow}{if} (\mbox{\hyperlink{Funcoes_8h_ac01e912b08ef9e6b825f4b01262346e5}{ExportaDadosPlanoNutri}}(\textcolor{stringliteral}{"{}ExpPlanoNutricional.csv"{}}, nutri, E)) \{}
+\DoxyCodeLine{143         printf(\textcolor{stringliteral}{"{}Dados dos planos nutricionais exportados com sucesso...\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{146         printf(\textcolor{stringliteral}{"{}Erro ao exportar os dados dos planos nutricionais...\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{147     \}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#pragma region TÓPICO 2}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     \textcolor{keywordtype}{int} pacientesUltrapassam = \mbox{\hyperlink{Funcoes_8h_a68d5266178858cf9bbba77feed22df6d}{NumPacientesUltrapassamCal}}(nutri, dietas, E);}
+\DoxyCodeLine{154     printf(\textcolor{stringliteral}{"{}Número de pacientes que ultrapassaram o limite de calorias: \%d\(\backslash\)n\(\backslash\)n"{}}, pacientesUltrapassam);}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#pragma region TÓPICO 3}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     \mbox{\hyperlink{Funcoes_8h_a17bba55d30c4ba8402a4008a3ecf575b}{IdentificaForaIntervalo}}(nutri, dietas, dados, nCump, E);}
+\DoxyCodeLine{161     \mbox{\hyperlink{Funcoes_8h_a9767d1a3f42f051b319ba38d74fc6b36}{OrdenaPacientesForaIntervalo}}(nCump, E);}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     \textcolor{comment}{// Exibir resultados}}
+\DoxyCodeLine{164     printf(\textcolor{stringliteral}{"{}Pacientes fora do intervalo ordenados:\(\backslash\)n"{}});}
+\DoxyCodeLine{165     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < E; i++) \{}
+\DoxyCodeLine{166         \textcolor{keywordflow}{if} (nCump[i].numpaciente < -\/1) \{ \textcolor{comment}{//em caso do array ter espaços ocupados com lixo}}
+\DoxyCodeLine{167             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{168         \}}
+\DoxyCodeLine{169         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{170             printf(\textcolor{stringliteral}{"{}\%d -\/ \%s, \%d\(\backslash\)n"{}}, nCump[i].numpaciente, nCump[i].nome, nCump[i].telefone);}
+\DoxyCodeLine{171         \}}
+\DoxyCodeLine{172     \}}
+\DoxyCodeLine{173     printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#pragma region TÓPICO 4}}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179     \mbox{\hyperlink{Funcoes_8h_a37b043bda4281665d1c183aa1ee681d6}{ListaPlanoNutricional}}(nutri, E, 1, 0, \textcolor{stringliteral}{"{}10-\/05-\/2023"{}}, \textcolor{stringliteral}{"{}12-\/05-\/2023"{}});}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#pragma endregion }}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#pragma region TÓPICO 5}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185     \mbox{\hyperlink{Funcoes_8h_a3fa074668b420670bec0325f5c120e86}{CalcularMediasRefeicoes}}(dietas, mediaPc, E, E, \textcolor{stringliteral}{"{}10-\/05-\/2023"{}}, \textcolor{stringliteral}{"{}12-\/05-\/2023"{}});}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < E; i++) \{}
+\DoxyCodeLine{188         printf(\textcolor{stringliteral}{"{}Paciente \%d:\(\backslash\)n"{}}, mediaPc[i].numpaciente);}
+\DoxyCodeLine{189         printf(\textcolor{stringliteral}{"{}Média Pequeno Almoço: \%.2f\(\backslash\)n"{}}, mediaPc[i].mediapequenoalmoco);}
+\DoxyCodeLine{190         printf(\textcolor{stringliteral}{"{}Média Almoço: \%.2f\(\backslash\)n"{}}, mediaPc[i].mediaalmoco);}
+\DoxyCodeLine{191         printf(\textcolor{stringliteral}{"{}Média Jantar: \%.2f\(\backslash\)n\(\backslash\)n"{}}, mediaPc[i].mediajantar);}
+\DoxyCodeLine{192     \}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#pragma endregion }}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#pragma region TÓPICO 6}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198     \mbox{\hyperlink{Funcoes_8h_a8f9b98d93dde41c4379b45e6f9cf49eb}{GerarTabelaRefeicoes}}(dados, dietas, nutri, 3, 3, 3);}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204    }
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206 \}}
+
+\end{DoxyCode}

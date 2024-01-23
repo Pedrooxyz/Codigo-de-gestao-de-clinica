@@ -1,0 +1,47 @@
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{\numberline {1}Introdução}{7}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Estrutura do Código}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Criação dos Ficheiros .c e .h}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Criação das Funções}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Funções LeDados}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Função MostraAjuda}{13}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Manipulação do main.c}{13}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Inserção de Parâmetros na função main}{13}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Declaração de variáveis}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Análise de argumentos de linha de comando e linha de entrada}{14}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Análise de dados fornecidos por stdin}{16}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Leitura e armazenamento dos dados}{17}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Desenvolvimento dos ficheiros para uso como argumentos}{18}{section.2.4}%
+\contentsline {chapter}{\numberline {3}README.md}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Estrutura do Ficheiro}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Detalhes de cada cabeçalho}{20}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Makefile}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Componentes do Makefile}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Estrutura do Makefile}{23}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Documetação Doxygen}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Configuração do Doxyfile}{27}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}1º Passo}{27}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}2º Passo}{27}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}3º Passo}{28}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}4º Passo}{28}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}5º Passo}{29}{subsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.6}6º Passo}{29}{subsection.5.1.6}%
+\contentsline {subsection}{\numberline {5.1.7}7º Passo}{30}{subsection.5.1.7}%
+\contentsline {subsection}{\numberline {5.1.8}8º Passo}{30}{subsection.5.1.8}%
+\contentsline {section}{\numberline {5.2}Doxygen}{31}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Documentação no início de cada ficheiro}{31}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Documentação de Funções}{32}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Documentação de Structs e Enumerados}{32}{subsection.5.2.3}%
+\contentsline {chapter}{\numberline {6}Latex}{33}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Ficheiro refman.pdf}{33}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Relatório Latex}{35}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Como divimos os tópicos hierarquicamente}{35}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Como pusemos o texto em negrito e em itálico}{35}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Como inserimos imagens}{35}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Como inserimos listagem de código}{36}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Como inserimos os indíces necessários}{36}{subsection.6.2.5}%
+\contentsline {chapter}{\numberline {7}Ficheiro .bib}{37}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Criação e Preenchimento do ficheiro .bib}{37}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Como usamos o ficheiro .bib para fazer as nossas referências bibliogŕaficas}{38}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusão}{39}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Referências Bibliográficas}{41}{chapter.9}%
